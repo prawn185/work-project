@@ -1,0 +1,21 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Nm Default" />
+    <inspection_tool class="MessDetectorValidationInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="customRulesets">
+        <list>
+          <RulesetDescriptor>
+            <option name="name" value="standard" />
+            <option name="path" value="$PROJECT_DIR$/../netdev.top5s.co.uk/build/phpmd.xml" />
+          </RulesetDescriptor>
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PhpCSValidationInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="CODING_STANDARD" value="PSR2" />
+      <option name="WARNING_HIGHLIGHT_LEVEL_NAME" value="ERROR" />
+    </inspection_tool>
+    <inspection_tool class="PhpUndefinedFieldInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpUndefinedMethodInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>
