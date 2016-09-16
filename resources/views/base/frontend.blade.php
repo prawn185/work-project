@@ -6,60 +6,46 @@
 <html id="top" lang="en" class="no-js"> <!--<![endif]-->
 
     <head>
-        {{-- Page Meta Data --}}
-        @include('seo::frontend.partials._meta')
+
 
         {{-- Favicon --}}
         <link rel="shortcut icon" href="{{ Config::get('base::frontend.favicon') }}">
 
-        {{-- Header Css files --}}
-        @include('base::layouts.partials.header_styles')
-
-        {{-- Header Javascript files --}}
-        @include('base::layouts.partials.header_scripts')
-
-        {{-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --}}
-        <!--[if lt IE 9]>
         <script src="/assets/js/vendor/html5shiv.js"></script>
         <script src="/assets/js/vendor/respond.min.js"></script>
-        <![endif]-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        {{-- Header Snippets --}}
-        @include('base::layouts.partials.header_snippets')
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
     </head>
 
 
-    <body class="{{ (Package::exists('site')) ? site('theme') : '' }}">
+    <body class="body">
 
-        {{-- Analytics --}}
-        @include('seo::frontend.partials.analytics')
+
 
         <div id="container">
             <div class="container-bg">
 
-                {{-- Header section --}}
-                @include('base::layouts.partials.header')
+                 {{-- Header section --}}
+                @yield('header')
 
-                {{-- Banner section --}}
-                @yield('banner')
 
                 {{-- Middle section --}}
-                @include('base::layouts.partials.middle')
+                @yield('middle')
 
-                {{-- Footer Main section --}}
-                @include('base::layouts.partials.footer')
+
 
             </div>
         </div>
 
-        {{-- Utilities, js / ie warning, modal ect --}}
-        @include('base::layouts.blocks.utilities')
-
-        {{-- Footer Javascript files --}}
-        @include('base::layouts.partials.footer_scripts')
-
-        {{-- Footer Snippets --}}
-        @include('base::layouts.partials.footer_snippets')
 
     </body>
 </html>
