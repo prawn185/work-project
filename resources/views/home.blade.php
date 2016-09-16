@@ -40,7 +40,12 @@
         <div class="container">
             <div class="content">
                 <div class="col-md-4">
+                    <a href="http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=CAF612C44D539DD035B51D39FA4BA910&steamid=76561198059020084">
+
+               <?php  echo 1; ?>
+                   <a href="/user">akihjfg</a>
                 <div class="title">Hello World</div>
+                        </a>
                     </div>
             </div>
         </div>
